@@ -1,0 +1,33 @@
+#top{
+ border-style:solid;
+ border-color:pink;
+ border-width:6px;
+ margin-left:250px;
+ margin-top:50px;
+ padding-left:300px;
+ width:50%;
+ background-color:red;
+ font-family: 'Goldman', cursive;
+
+}
+
+#bottom{
+
+    border-style:solid;
+    border-color:black;
+    border-width:6px;
+    margin-top:440px;
+    margin-left:250px;
+    padding-left: 300px;
+    width:50%;
+    background-color: green;
+    
+    font-family: 'Roboto Slab', serif;
+   
+
+}
+
+h1{
+
+    font-family: 'Xanh Mono', monospace;
+}

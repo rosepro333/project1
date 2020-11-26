@@ -1,0 +1,62 @@
+/* tagname or id or classname{
+
+    prperty: value;
+    property1:value1;
+    
+     */
+     div{ 
+        margin:auto;
+
+
+    }
+    
+   div label{
+
+        margin-left:180px;
+    }
+    div  li{
+        margin-left:180px;
+    }
+
+body{
+    background-image: url('ipl.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: black
+    
+}
+h1{
+        color:red;
+ } 
+#one{
+
+        color:rgb(3, 182, 252)
+    }
+div{
+
+    border-style: solid;
+    border-color: lightblue;
+    border-width: 5px;
+    background-color: yellow;
+    width: 50%;
+}    
+#mi{
+
+    border-style: solid;
+    border-color:pink;
+    border-width: 5px;
+    background-color:rgb(98, 25, 194);
+    width: 50%;
+    
+}
+
+.team{
+
+    border-style: solid;
+    border-color:rgb(209, 39, 67);
+    border-width: 5px;
+    background-color:rgb(114, 212, 21);
+    width: 50%;
+    
+
+}
