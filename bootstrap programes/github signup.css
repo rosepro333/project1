@@ -1,0 +1,55 @@
+.navbar{
+
+    background-color: black;
+
+}
+a {
+    color: white;
+
+}
+
+img{
+    width: 25px;
+}
+
+
+
+
+
+.container{
+   
+   width: 600px;
+   margin-top: 100px;
+   
+ 
+}
+h1{
+    text-align: center;
+    margin-bottom: 40px;
+  
+}
+p{
+
+margin-left: 250px;
+margin-bottom: 1px;
+margin-top: 25px;
+padding-top: 20px;
+
+}
+.navbar-nav {
+
+    margin-right: 40px;
+}
+.two{
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 10px;
+ 
+  
+}
+.three{
+    color: rgb(49, 49, 221);
+}
+.four{
+    font-size: 12px;
+}
