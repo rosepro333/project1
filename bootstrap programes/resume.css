@@ -58,7 +58,7 @@ em{
 }
 .four{
 
-    margin-left: 100px;
+    margin-left: 20px;
 }
 
 .button-default{
@@ -70,5 +70,14 @@ border: 4px solid rgb(19, 134, 119);
 font-size: 15px;
 width: 120px;
 padding-left: 15px;
+
+}
+
+.ten{
+
+    background-color:rgb(19, 134, 119)  ;
+    color: white;
+    border: 4px solid  rgb(19, 134, 119);
+    
 
 }
