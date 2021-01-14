@@ -1,4 +1,5 @@
 //https://developer.mozilla.org/en-US/docs/Web/Events
+
 var cl=document.querySelector("#clk")
 //pass two arguments...(which event this action perform,what will do when this action performed)
 //click
@@ -7,7 +8,8 @@ cl.addEventListener("click",()=>{
     cl.textContent="clicked";
     cl.style.color="red";
     
-})
+             }
+         )
 //mouse over
 var ov=document.querySelector("#over")
 ov.addEventListener("mouseover",()=>{

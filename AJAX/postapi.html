@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity=
+"sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+
+         <div class="row">
+           <div class="col-4"></div>
+           <div class="col-4">create your post</div>
+           <div class="col-4"></div>
+         </div>
+       
+    
+        <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+           <label for="">title</label>
+           <input type="text" class="form-control" id="title"><br>
+
+           <label for="">body</label>
+           <input type="text" class="form-control" id="body"><br>
+
+           <label for="">userid</label>
+           <input type="text" class="form-control" id="uid"><br>
+
+           <button type="button"  onclick="createPost()" class="btn btn-success">create post</button>
+
+
+
+
+        </div>
+        <div class="col-4"></div>
+        </div>
+
+   
+
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+</body>
+<script>
+    function createPost(){
+           var title=document.querySelector("#title").value
+           var body=document.querySelector("#body").value
+           var userid=document.querySelector("#uid").value
+           console.log(title,body,userid)
+
+          //pass data in the form of object          
+           var newpost={
+                 title: title,
+                 body: body,
+                 userId: userid,
+                }
+
+              sendData(newpost)
+          
+
+}
+
+ //set http
+
+  const xhr = new XMLHttpRequest();
+    //open() we have to two parameters
+    //method?  get
+    //api/url to connect  https://jsonplaceholder.typicode.com/users
+  
+    //here we connect one backend (that we don't know).In real situations we connect node,......etc
+    xhr.open("post","https://jsonplaceholder.typicode.com/posts")
+    function sendData(newpost){
+
+        xhr.send(newpost);
+
+            }
+    
+    xhr.onreadystatechange=()=>{
+        if(xhr.readyState==4){
+            if((xhr.status>=200)&(xhr.status<300)){
+                swal("Good job!", "your post is created now");
+              //  alert("your post is created")
+                console.log("success")
+                //200series
+                console.log(xhr.status)
+               // alert(xhr.responseText)
+               
+            }
+            else{
+                //400series
+                console.log(xhr.status)
+            }
+
+            console.log("task complete")
+            
+        }
+    }
+
+
+
+
+    
+
+
+
+
+</script>
+
+
+
+
+
+
+
+</html>

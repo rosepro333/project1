@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+     
+     const xhr = new XMLHttpRequest();
+    //open() we have to two parameters
+    //method?  get
+    //api/url to connect  https://jsonplaceholder.typicode.com/users
+  
+    xhr.open("get","https://jsonplaceholder.typicode.com/users")
+    xhr.send();
+    xhr.onreadystatechange=()=>{
+        if(xhr.readyState==4){
+            if((xhr.status>=200)&(xhr.status<300)){
+                console.log("success")
+                //200series
+                console.log(xhr.status)
+                alert(xhr.responseText)
+            }
+            else{
+                //400series
+                console.log(xhr.status)
+            }
+
+            console.log("task complete")
+            
+        }
+    }
+
+
+
+</script>
+</html>

@@ -8,19 +8,41 @@
   <link rel="stylesheet" href="/resources/demos/style.css">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    $( "#datepicker" ).datepicker();
-  } );
+  <script type="text/javascript">
+  $(document).ready( function() {
+                  var age="";
+                  $( "#datepicker" ).datepicker({
+                                   onSelect:function(value,ui){
+
+                                    var today=new date();
+                                    age=today.getFullYear()-ui.selectedYear;
+                                    $("Agedisplay").val(age);
+                                   },
+                                   changeMonth:true,
+                                   changeYear:true
+                                  })  
+                  })
+
+
+                
+
   </script>
 </head>
 <body>
  
 <p>Date: <input type="text" id="datepicker"></p>
-
-<input type="button" value="Age" >
+<!-- 
+<input type="button" value="Age" > -->
 <p>Age: <input type="text" id="Agedisplay"></p>
  
  
 </body>
+
+
+<!-- var currentDate = new Date()
+var day = currentDate.getDate()
+var month = currentDate.getMonth() + 1
+var year = currentDate.getFullYear()
+document.write("<b>" + day + "/" + month + "/" + year + "</b>") -->
+
 </html>

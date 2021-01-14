@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity=
+"sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="container">
+  <div class="jumbotron">
+       <div class="row">
+           <div class="col-4"></div>
+           <div class="col-4">delete post</div>
+           <div class="col-4"></div>
+       </div>
+       
+    
+       <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+           
+           <label for="">postid</label>
+           <input type="text" class="form-control" id="pid"><br>
+
+           <button type="button"  onclick="Delete()" class="btn btn-success">delete post</button>
+
+
+
+
+        </div>
+        <div class="col-4"></div>
+        </div>
+
+   
+
+
+    </div>
+
+    
+</div>
+
+
+</body>
+
+<script>
+const xhr = new XMLHttpRequest();
+ var url=""
+function Delete(){
+
+    var postid=document.querySelector("#pid").value
+    //alert(postid)
+
+    //set http
+    url="https://jsonplaceholder.typicode.com/posts/"+postid
+    DeletePost(url)
+
+}
+
+
+    //open() we have to two parameters
+    //method?  get
+    //api/url to connect  https://jsonplaceholder.typicode.com/users
+  
+    //here we connect one backend (that we don't know).In real situations we connect node,......etc
+    
+    function DeletePost(url){
+        alert(url)
+        xhr.open("delete",url)
+        xhr.send()
+
+
+    }
+  
+
+    xhr.onreadystatechange=()=>{
+        if(xhr.readyState==4){
+            if((xhr.status>=200)&(xhr.status<300)){
+                alert("that post is deleted ")
+                console.log("success")
+                //200series
+                console.log(xhr.status)
+                alert(xhr.responseText) //output data is here
+             
+
+            }
+            else{
+                //400series
+                console.log(xhr.status)
+            }
+
+            console.log("task complete")
+            
+        }
+    }
+
+
+
+
+
+</script>
+
+
+
+</html>

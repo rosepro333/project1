@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <form action="">
+        <label for="">title</label>
+        <input type="text" id="title">
+        <label for="">body</label>
+        <input type="text" id="body">
+        <button onclick="createPost()">create post</button>
+
+
+
+    </form> -->
+</head>
+<body>
+    
+</body>
+<script>
+
+   // ... function createPost() 
+
+   //...  console.log("inside create")
+     const xhr = new XMLHttpRequest();
+    //open() we have to two parameters
+    //method?  get
+    //api/url to connect  https://jsonplaceholder.typicode.com/users
+  var  url="https://jsonplaceholder.typicode.com/posts"
+  url= url+"/1"
+
+  var data=
+     {
+        id: 1,
+       title: 'xxx',
+       body: 'yyy',
+    
+        
+    }
+//pass json format
+  var put=JSON.stringify(data)
+
+    xhr.open("put",url)
+    xhr.send(put);
+
+    xhr.onreadystatechange=()=>{
+        if(xhr.readyState==4){
+            if((xhr.status>=200)&(xhr.status<300)){
+                console.log("success")
+                //200series
+                console.log(xhr.status)
+                alert(xhr.responseText)
+            }
+            else{
+                //400series
+                console.log(xhr.status)
+            }
+
+            console.log("task complete")
+            
+        }
+    }
+
+
+
+</script>
+</html>

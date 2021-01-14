@@ -29,8 +29,8 @@ sb.m1()
 
 
 var ch=new Child()
-sb.m2()
-sb.m1()
+ch.m2()
+ch.m1()
 
 var p=new Parent()
 p.m1()

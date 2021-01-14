@@ -17,9 +17,9 @@
 
 // }
 //...........................................
-// var hd=document.getElementById("dm")
-// hd.textContent="document object methods"
-// hd.innerHTML="<em>document object method</em>"
+var hd=document.getElementById("dm")
+hd.textContent="document object methods"
+ hd.innerHTML="<em>document object method</em>"
 //alerting ...........
 // var h1=document.getElementById("one")
 // alert(h1.textContent)
