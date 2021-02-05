@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- <form action="">
+       
         <label for="">title</label>
         <input type="text" id="title">
         <label for="">body</label>
         <input type="text" id="body">
         <button onclick="createPost()">create post</button>
-
-
+        
 
     </form> -->
 </head>
@@ -32,17 +32,16 @@
 
   var data=
      {
-        id: 1,
-       title: 'xxx',
-       body: 'yyy',
     
+       title: 'xxx'
+       
         
     }
 //pass json format
-  var put=JSON.stringify(data)
+ //var patch=JSON.stringify(data)
 
-    xhr.open("put",url)
-    xhr.send(put);
+    xhr.open("patch",url)
+    xhr.send(data);
 
     xhr.onreadystatechange=()=>{
         if(xhr.readyState==4){
